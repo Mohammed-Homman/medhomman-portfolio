@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Nassim Oulkaid, portfolio, Nassim, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
-    <meta name="description" content="Welcome to Nassim's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <meta name="keywords" content="Mohammed Homman, portfolio, Mohammed, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Mohammed's Portfolio. Full-Stack Web Developer and Android App Developer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Favicon -->
-    <link id='favicon' rel="shortcut icon" href="./assets/images/profile.png" type="image/x-png">
-    <title>Portfolio | Nassim Oulkaid</title>
+    <link id='favicon' rel="shortcut icon" href="./assets/images/profile.jpg" type="image/x-png">
+    <title>Portfolio | Mohammed Homman</title>
 </head>
 <body oncontextmenu="return false">
 <!-- navbar starts -->
 <header>
-        <a href="" class="logo"><i class="fab fa-node-js"></i> Nassim</a>
+        <a href="" class="logo"><i class="fab fa-node-js"></i> Mohammed</a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -40,7 +40,7 @@
     <div id="particles-js"></div>
 
     <div class="content">
-    <h2>Hi There,<br/> I'm Nassim <span>Oulkaid</span></h2>
+    <h2>Hi There,<br/> I'm Mohammed <span>Homman</span></h2>
     <p>i am into <span class="typing-text"></span></p>
     <a href="#about" class="btn"><span>About Me</span>
       <i class="fas fa-arrow-circle-down"></i>
@@ -54,7 +54,7 @@
       </div>
     </div>
 <div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/profile.png" alt="">
+    <img draggable="false" class="tilt" src="./assets/images/profile.jpg" alt="">
 </div>
 </section>
 <!-- hero section ends -->
@@ -67,33 +67,55 @@
     <div class="row">
 
     <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/profile2.jpeg" alt="">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.png" alt="">
     </div>
     <div class="content">
-        <h3>I'm Nassim</h3>
-        <span class="tag">Full Stack Developer</span>
+        <h3>I'm Mohammed</h3>
+        <span class="tag">Full Stack Developer & DevOps enthusiast</span>
         
-        <p>I am a Full-Stack developer based in Meknès, Morocco,
-           currently pursuing a Software Engineering degree at ENSA.
-           I am passionate about enhancing my coding skills and developing applications and websites.
-           Constantly seeking out the latest advancements in technology,
-           I am dedicated to improving my expertise. I also love building Full-Stack clones. </p>
+        <p>I am a Full-Stack developer based in Fez, Morocco, pursuing a Software Engineering degree at ENSA. Passionate about coding and always learning, I focus on building innovative applications and websites.
+          Recently, I’ve expanded into DevOps with technologies like Docker, Harbor, and Kubernetes to create scalable solutions. I’m also active on LeetCode and HackerRank, sharpening my problem-solving skills.
+          Proficient in the full software development life cycle, I’m eager to grow with a company that values motivated, authentic individuals. </p>
         
         <div class="box-container">
             <div class="box">
-              <p><span> age : </span> 22 </p>
+              <p><span> age : </span> 23 </p>
               <p><span> phone : </span> +212XXXXXXXXX </p>
             </div> 
             <div class="box">
-              <p><span> email : </span> nassimoulkq@gmail.com</p>
+              <p><span> email : </span> contact.medHomman@gmail.com</p>
             </div>
         </div>
         
         <div class="resumebtn">
-            <a href="#" target="_blank" class="btn"><span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
-        </div>
+          <button id="downloadBtn" class="btn">
+              <span>Download CV</span>
+              <i class="fas fa-chevron-right"></i>
+          </button>
+      </div>
+      <script>
+      // Reference to your CV in Firebase Storage
+      const storageRef = storage.ref('cv.pdf'); 
+      
+      // Download button element
+      const downloadBtn = document.getElementById('downloadBtn');
+      
+      // On button click, fetch the download URL and trigger the download
+      downloadBtn.addEventListener('click', () => {
+        storageRef.getDownloadURL()
+          .then((url) => {
+            // Create a temporary anchor element to trigger the download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'My_CV.pdf'; // Name for the downloaded file
+            a.click(); // Trigger the download
+          })
+          .catch((error) => {
+            console.error("Error getting download URL:", error);
+          });
+      });
+            
+    </script>
 
     </div>
     </div>
@@ -200,19 +222,19 @@
         <img draggable="false" src="./assets/images/educat/images.jpeg" alt="">
         </div>
         <div class="content">
-        <h3>Engineering School in Applied Sciences</h3>
+        <h3>National School of Applied Sciences</h3>
         <p>École Nationale des Sciences Appliquées (ENSAF) | Engineering School</p>
-        <h4>2022-2026 | Pursuing</h4>
+        <h4>2022-2025 | Pursuing</h4>
         </div>
     </div>
 
     <div class="box">
       <div class="image">
-      <img draggable="false" src="./assets/images/educat/carnot_cpge.jpeg" alt="">
+      <img draggable="false" src="./assets/images/educat/CPGE_TAZA.jpg" alt="">
       </div>
       <div class="content">
       <h3>Preparatory Classes for Engineering Schools</h3>
-      <p>Carnot Prepa | CPGE</p>
+      <p>Lycee Charif Al Idrissi · CPGE</p>
       <h4>2019-2022 | Completed</h4>
       </div>
     </div>
@@ -306,6 +328,8 @@
     </div>
 
 </section>
+
+
 <!-- work project section ends -->
 
 <!-- experience section starts -->
@@ -318,11 +342,11 @@
     <div class="container right">
       <div class="content">
         <div class="tag">
-          <h2>IMCOWORKSPACE</h2>
+          <h2>Marketing Confort</h2>
         </div>
         <div class="desc">
-            <h3>Full Stack Developer | Internship</h3>
-            <p>June 2024 - July 2024 | present</p>
+            <h3>Full Stack Developer · Internship</h3>
+            <p>June 2024 - October 2024 · 4 Months</p>
         </div>
       </div>
     </div>
@@ -330,62 +354,16 @@
     <div class="container left">
       <div class="content">
         <div class="tag">
-          <h2>iTecZone</h2>
+          <h2>Ministry of Agriculture, Fisheries, Rural Development, Water and Forests  </h2>
         </div>
         <div class="desc">
-            <h3>Mobile Developer | Internship</h3>
-            <p>June 2023 - august 2023</p>
+            <h3>Fulls Stack Developer · Internship</h3>
+            <p>August 2023 - October 2023</p>
         </div>
       </div>
     </div>
 
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>XXXXXXXXXXXXX</h2>
-        </div>
-        <div class="desc">
-            <h3>XXXXXXXXXXXXXXXXXX</h3>
-            <p>XX 20XX - XX 20XX</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>XXXXXXXXXXXXX</h2>
-        </div>
-        <div class="desc">
-            <h3>XXXXXXXXXXXXXXXXXX</h3>
-            <p>XX 20XX - XX 20XX</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>XXXXXXXXXXXXX</h2>
-        </div>
-        <div class="desc">
-            <h3>XXXXXXXXXXXXXXXXXX</h3>
-            <p>XX 20XX - XX 20XX</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>XXXXXXXXXXXXX</h2>
-        </div>
-        <div class="desc">
-            <h3>XXXXXXXXXXXXXXXXXX</h3>
-            <p>XX 20XX - XX 20XX</p>
-        </div>
-      </div>
-    </div>
+    
   </div>
 </div>
 
@@ -434,16 +412,19 @@
 
 <script>
   const firebaseConfig = {
-      apiKey: "AIzaSyCeFVf-O20zd1PCYxMW8PbV7Emu2m5xc88",
-      authDomain: "nassimoulkaid-2afe3.firebaseapp.com",
-      databaseURL: "https://nassimoulkaid-2afe3-default-rtdb.firebaseio.com",
-      projectId: "nassimoulkaid-2afe3",
-      storageBucket: "nassimoulkaid-2afe3.appspot.com",
-      messagingSenderId: "258063624021",
-      appId: "1:258063624021:web:4192179e461d192870b1dc"
-  };
-      // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  apiKey: "AIzaSyBSW-gntp7eln9uOotqIyqh7wiM0oOuIYY",
+  authDomain: "medhomman-portfolio.firebaseapp.com",
+  databaseURL: "https://medhomman-portfolio-default-rtdb.firebaseio.com",
+  projectId: "medhomman-portfolio",
+  storageBucket: "medhomman-portfolio.appspot.com",
+  messagingSenderId: "521773740813",
+  appId: "1:521773740813:web:d25fbeac21280eeb19f644",
+  measurementId: "G-8RMGHV8CH4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
   var ContactformDB = firebase.database().ref('Contactform');
   document.getElementById('contact-form').addEventListener('submit', submitForm );
@@ -492,7 +473,7 @@
   <div class="box-container">
 
       <div class="box">
-          <h3>Nassim's Portfolio</h3>
+          <h3>Mohammed's Portfolio</h3>
           <p>Thank you for visiting my personal portfolio website.<br/> <br/> Keep Rising 🚀. Connect with me over my social media</p>
       </div>
 
@@ -509,8 +490,8 @@
       <div class="box">
           <h3>contact info</h3>
           <p> <i class="fas fa-phone"></i>+212XXXXXXXXX</p>
-          <p> <i class="fas fa-envelope"></i>nassimoulkq@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Meknés, morocco</p>
+          <p> <i class="fas fa-envelope"></i>contact.medHomman@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i>Fez, morocco</p>
           <div class="share">
 
               <a href="" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
@@ -521,7 +502,7 @@
       </div>
   </div>
 
-  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/jigar-sable"> Nassim Oulkaid</a></h1>
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/mohammed-homman"> Mohammed Homman</a></h1>
 
 </section>
 <!-- footer section ends -->

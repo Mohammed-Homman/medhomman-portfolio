@@ -41,7 +41,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | Nassim Oulkaid";
+            document.title = "Portfolio | Mohammed Homman";
             $("#favicon").attr("href", "assets/images/profile.png");
         }
         else {
