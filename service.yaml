@@ -7,6 +7,6 @@ spec:
     app: portfolio
   ports:
   - protocol: TCP
-    port: 80         # The port exposed by the service
-    targetPort: 80   # The port in the container (same as containerPort in deployment.yaml)
+    port: 80         
+    targetPort: 80   
   type: LoadBalancer
