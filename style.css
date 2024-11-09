@@ -681,7 +681,7 @@ header .navbar ul li a:hover {
   font-size: 1.6rem;
 }
 .work .box-container .box:hover .content {
-  top: 25%;
+  top: 15%;
 }
 .work .desc {
   margin: 2rem;
@@ -696,7 +696,7 @@ header .navbar ul li a:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 .work .desc .btns .btn {
   line-height: 0;
